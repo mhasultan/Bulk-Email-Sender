@@ -41,7 +41,7 @@ python gui_send_email.py
 Ensure all required Python libraries are installed:
 
 ```bash
-pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client pandas imgkit pillow
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client pandas imgkit pillow tkinter
 ```
 
 ## Notes
