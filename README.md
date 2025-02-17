@@ -1,12 +1,14 @@
 # Email-Sender
-This is an automated email sender using the Gmail API. It personalizes emails, generates dynamic PDF attachments from HTML, and supports bulk email sending with multiple Gmail accounts.
+This is an automated email sender using the Gmail API. It personalizes emails, and supports bulk email sending with multiple Gmail accounts.
 
 ## Features
 - Send bulk emails via Gmail API.
 - Personalize email content with dynamic placeholders.
-- Convert HTML invoices to PDF attachments.
+- Graphical User Interface (GUI)
 - Logs all sent emails for tracking.
-
+- Send emails in primary inbox
+- Add attachments to the emails
+  
 ## Requirements
 Ensure you have the following installed:
 
@@ -28,53 +30,21 @@ Ensure you have the following installed:
    - Configure the consent screen and create credentials.
    - Download the `credentials.json` file and place it in the project directory.
 
-## Configuring Sender and Receiver Emails
-1. **Adding Senders (Gmail Accounts)**
-   - Open `gmail.csv` and add sender email addresses with their app passwords.
-   
-   Format:
-   ```csv
-   email,password
-   sender1@gmail.com,app_password
-   sender2@gmail.com,app_password
-   ```
-
-2. **Adding Receivers (Contacts)**
-   - Open `contacts.csv` and add recipient details.
-   
-   Format:
-   ```csv
-   name,email
-   John Doe,johndoe@example.com
-   Jane Doe,janedoe@example.com
-   ```
-
-## Customizing Email Content
-1. **Email Body**
-   - Edit `body.txt` to change the email content.
-
-2. **Email Subject**
-   - Modify `subjects.csv` to customize subjects.
-
-3. **HTML Invoice for PDF Attachment**
-   - Update `html_code.html` to change the invoice content before conversion to PDF.
-
 ## Running the Script
 Run the script with:
 
 ```bash
-python send_email.py
+python gui_send_email.py
 ```
 
 ## Dependencies
 Ensure all required Python libraries are installed:
 
 ```bash
-pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client pandas imgkit pillow
+pip install google-auth google-auth-oauthlib google-auth-httplib2 google-api-python-client pandas imgkit pillow tkinter
 ```
 
 ## Notes
-- Ensure `wkhtmltopdf` is installed and correctly configured.
 - The script logs email activity in `mail.log`.
 
 This project is for educational purposes. Use responsibly.
